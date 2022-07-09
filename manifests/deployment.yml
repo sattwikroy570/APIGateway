@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: sattwikroyapigateway 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sattwikroyapigateway
+  template:
+    metadata:
+      labels:
+        app: sattwikroyapigateway 
+    spec:
+      containers:
+        - name: sattwikroyapigateway 
+          image: mfpeacr.azurecr.io/sattwikroyapigateway
+          ports:
+          - containerPort: 80
