@@ -33,7 +33,7 @@ namespace APIGateway
                 options.AddDefaultPolicy(
                     builder =>
                     {
-                        builder.WithOrigins("https://retailbankinggateway.azurewebsites.net", "http://localhost:4200")
+                        builder.WithOrigins("http://20.25.240.232/", "http://mfpe-retailbankportal.azurewebsites.net/")
                                             .AllowAnyOrigin()
                                             .AllowAnyHeader()
                                             .AllowAnyMethod();
